@@ -79,11 +79,6 @@ class ButtonExtension implements DocumentRegistry.IWidgetExtension<NotebookPanel
     panel.toolbar.insertItem(9, 'hideInput', buttonHideInput);
 	panel.toolbar.insertItem(9, 'showInput', buttonShowInput);
 
-      interface testMessageData{
-          type: string;
-          name: string; 
-      }
-
     return new DisposableDelegate(() => {
       buttonHideInput.dispose();
 	  buttonShowInput.dispose();

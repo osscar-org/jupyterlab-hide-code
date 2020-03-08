@@ -1,18 +1,22 @@
 # jupyterlab-hide-code
 
-![Github Actions Status](https://github.com/osscar-org/jupyterlab-hide-code/workflows/Build/badge.svg)
+A button in JupyterLab to run the code cells and then to hide the code cells.
+This JupyterLab extension was inspired by a JupyterLab extension from Aachen
+(Aix) Virtual Platform for Materials Processing:
 
-A button in JupyterLab to hide the code cells.
+https://github.com/AixViPMaP/jlab-hide-code
 
 
 ## Requirements
 
-* JupyterLab >= 2.0
+* JupyterLab >= 1.2
+* JupyterLab < 2.0
+
 
 ## Install
 
 ```bash
-jupyter labextension install jupyterlab-hide-code
+jupyter labextension install osscar@jupyterlab-hide-code
 ```
 
 ## Contributing
@@ -53,3 +57,9 @@ jupyter lab --watch
 jupyter labextension uninstall jupyterlab-hide-code
 ```
 
+# Acknowlegements
+
+We acknowledge support from:
+* EPFL Open Science Fund
+
+<img src='./OSSCAR-logo.png' width='300'>

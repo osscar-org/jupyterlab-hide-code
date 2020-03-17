@@ -1,5 +1,7 @@
 # jupyterlab-hide-code
 
+![Build](https://github.com/osscar-org/jupyterlab-hide-code/workflows/Build/badge.svg)
+
 A button in JupyterLab to run the code cells and then to hide the code cells.
 This JupyterLab extension was inspired by a JupyterLab extension from Aachen
 (Aix) Virtual Platform for Materials Processing:

@@ -28,3 +28,5 @@ jobs:
         jlpm && jlpm run build
         jupyter labextension install .
         python -m jupyterlab.browser_check
+    - name: Check package version
+      uses: technote-space/package-version-check-action@v1

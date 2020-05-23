@@ -17,7 +17,7 @@ https://github.com/AixViPMaP/jlab-hide-code
 ## Install
 
 ```bash
-jupyter labextension install osscar@jupyterlab-hide-code
+jupyter labextension install @osscar/jupyterlab-hide-code
 ```
 
 ## Contributing

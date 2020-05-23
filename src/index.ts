@@ -63,14 +63,14 @@ class ButtonExtension implements DocumentRegistry.IWidgetExtension<NotebookPanel
 
     let buttonHideInput = new ToolbarButton({
       className: 'myButton',
-      iconClass: 'fa fa-eye-slash fontawesome-colors',
+      iconClass: 'fa fa-sm fa-eye-slash fontawesome-colors',
       onClick: hideInputCode,
       tooltip: 'Hide Input'
     });
 
     let buttonShowInput = new ToolbarButton({
       className: 'myButton',
-      iconClass: 'fa fa-eye fontawesome-colors',
+      iconClass: 'fa fa-sm fa-eye fontawesome-colors',
       onClick: showInputCode,
       tooltip: 'Show Input'
     });

@@ -63,4 +63,4 @@ jupyter labextension uninstall jupyterlab-hide-code
 We acknowledge support from:
 * EPFL Open Science Fund
 
-<img src='./OSSCAR-logo.png' width='300'>
+<img src='http://www.osscar.org/wp-content/uploads/2019/03/OSSCAR-logo.png' width='240'>

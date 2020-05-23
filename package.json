@@ -1,6 +1,6 @@
 {
-  "name": "jupyterlab-hide-code",
-  "version": "0.1.0",
+  "name": "@osscar/jupyterlab-hide-code",
+  "version": "2.0.0",
   "description": "A JupyterLab extension to run and hide code cells. ",
   "keywords": [
     "jupyter",
@@ -22,13 +22,11 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/osscar-org/jupyterlab-hide-code.git"
+    "url": "git+https://github.com/osscar-org/jupyterlab-hide-code.git"
   },
   "scripts": {
-
     "build": "tsc",
     "clean": "rimraf lib tsconfig.tsbuildinfo",
-
     "eslint": "eslint . --ext .ts,.tsx --fix",
     "eslint:check": "eslint . --ext .ts,.tsx",
     "prepare": "jlpm run clean && jlpm run build",
@@ -49,7 +47,6 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
-
     "prettier": "1.16.4",
     "rimraf": "^2.6.1",
     "typescript": "~3.7.0"
@@ -58,7 +55,9 @@
     "style/*.css"
   ],
   "jupyterlab": {
-
     "extension": true
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

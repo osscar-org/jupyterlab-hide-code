@@ -1,25 +1,20 @@
-import {
-  IDisposable, DisposableDelegate
-} from '@lumino/disposable';
+import { IDisposable, DisposableDelegate } from '@lumino/disposable';
+
+import { PanelLayout } from '@lumino/widgets';
 
 import {
-  PanelLayout
-} from '@lumino/widgets';
-
-import {
-  JupyterFrontEnd, JupyterFrontEndPlugin
+  JupyterFrontEnd,
+  JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
-import {
-  ToolbarButton
-} from '@jupyterlab/apputils';
+import { ToolbarButton } from '@jupyterlab/apputils';
+
+import { DocumentRegistry } from '@jupyterlab/docregistry';
 
 import {
-  DocumentRegistry
-} from '@jupyterlab/docregistry';
-
-import {
-  NotebookActions, NotebookPanel, INotebookModel
+  NotebookActions,
+  NotebookPanel,
+  INotebookModel
 } from '@jupyterlab/notebook';
 
 import '../style/index.css';
@@ -30,29 +25,28 @@ const plugin: JupyterFrontEndPlugin<void> = {
   activate
 };
 
-
-export
-class ButtonExtension implements DocumentRegistry.IWidgetExtension<NotebookPanel, INotebookModel> {
-
-  createNew(panel: NotebookPanel, context: DocumentRegistry.IContext<INotebookModel>): IDisposable {
-
-    let hideInputCode = () => {
+export class ButtonExtension
+  implements DocumentRegistry.IWidgetExtension<NotebookPanel, INotebookModel> {
+  createNew(
+    panel: NotebookPanel,
+    context: DocumentRegistry.IContext<INotebookModel>
+  ): IDisposable {
+    const hideInputCode = () => {
       NotebookActions.runAll(panel.content, context.sessionContext);
 
       panel.content.widgets.forEach(cell => {
-        if (cell.model.type === 'code'){
-          let layout = cell.layout as PanelLayout;
+        if (cell.model.type === 'code') {
+          const layout = cell.layout as PanelLayout;
           layout.widgets[1].hide();
         }
       });
       buttonHideInput.hide();
       buttonShowInput.show();
     };
-    let showInputCode = () => {
-
+    const showInputCode = () => {
       panel.content.widgets.forEach(cell => {
-        if (cell.model.type === 'code'){
-          let layout = cell.layout as PanelLayout;
+        if (cell.model.type === 'code') {
+          const layout = cell.layout as PanelLayout;
           layout.widgets[1].show();
         }
       });
@@ -61,14 +55,14 @@ class ButtonExtension implements DocumentRegistry.IWidgetExtension<NotebookPanel
       buttonShowInput.hide();
     };
 
-    let buttonHideInput = new ToolbarButton({
+    const buttonHideInput = new ToolbarButton({
       className: 'myButton',
       iconClass: 'fa fa-sm fa-eye-slash fontawesome-colors',
       onClick: hideInputCode,
       tooltip: 'Hide Input'
     });
 
-    let buttonShowInput = new ToolbarButton({
+    const buttonShowInput = new ToolbarButton({
       className: 'myButton',
       iconClass: 'fa fa-sm fa-eye fontawesome-colors',
       onClick: showInputCode,
@@ -85,11 +79,10 @@ class ButtonExtension implements DocumentRegistry.IWidgetExtension<NotebookPanel
       buttonShowInput.dispose();
     });
   }
-
 }
 
 function activate(app: JupyterFrontEnd) {
   app.docRegistry.addWidgetExtension('Notebook', new ButtonExtension());
-};
+}
 
 export default plugin;

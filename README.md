@@ -11,8 +11,7 @@ https://github.com/AixViPMaP/jlab-hide-code
 
 ## Requirements
 
-* JupyterLab >= 1.2
-* JupyterLab < 2.0
+* JupyterLab >= 2.0
 
 
 ## Install

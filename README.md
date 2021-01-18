@@ -11,19 +11,19 @@ extension from Aachen (Aix) Virtual Platform for Materials Processing.
 
 ## Requirements
 
-* JupyterLab >= 2.0
+* JupyterLab >= 3.0
 
 
 ## Install
 
 ```bash
-jupyter labextension install @osscar/jupyterlab-hide-code
+pip install jupyterlab-hide-code
 ```
 
 ## Uninstall
 
 ```bash
-jupyter labextension uninstall jupyterlab-hide-code
+pip uninstall jupyterlab-hide-code
 ```
 
 ## Contributing

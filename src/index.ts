@@ -1,11 +1,11 @@
-import { IDisposable, DisposableDelegate } from '@lumino/disposable';
-
-import { PanelLayout } from '@lumino/widgets';
-
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
+
+import { IDisposable, DisposableDelegate } from '@lumino/disposable';
+
+import { PanelLayout } from '@lumino/widgets';
 
 import { ToolbarButton } from '@jupyterlab/apputils';
 
@@ -19,10 +19,16 @@ import {
 
 import '../style/index.css';
 
-const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jlab-hide-code:buttonPlugin',
+/**
+ * Initialization data for the jupyterlab-hide-code extension.
+ */
+const extension: JupyterFrontEndPlugin<void> = {
+  id: 'jupyterlab-hide-code',
   autoStart: true,
-  activate
+  activate: (app: JupyterFrontEnd) => {
+    app.docRegistry.addWidgetExtension('Notebook', new ButtonExtension());
+    console.log('JupyterLab extension jupyterlab-hide-code is activated!');
+  }
 };
 
 export class ButtonExtension
@@ -81,8 +87,4 @@ export class ButtonExtension
   }
 }
 
-function activate(app: JupyterFrontEnd) {
-  app.docRegistry.addWidgetExtension('Notebook', new ButtonExtension());
-}
-
-export default plugin;
+export default extension;

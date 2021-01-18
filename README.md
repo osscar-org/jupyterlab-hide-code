@@ -2,12 +2,12 @@
 
 ![Build](https://github.com/osscar-org/jupyterlab-hide-code/workflows/Build/badge.svg)
 
+![demo](./docs/hide-input.gif)
+
 A button in JupyterLab to run the code cells and then to hide the code cells.
-This JupyterLab extension was inspired by a JupyterLab extension from Aachen
-(Aix) Virtual Platform for Materials Processing:
-
-https://github.com/AixViPMaP/jlab-hide-code
-
+This JupyterLab extension was inspired by the
+[jlab-hide-code](https://github.com/AixViPMaP/jlab-hide-code) JupyterLab
+extension from Aachen (Aix) Virtual Platform for Materials Processing.
 
 ## Requirements
 
@@ -17,12 +17,18 @@ https://github.com/AixViPMaP/jlab-hide-code
 ## Install
 
 ```bash
-jupyter labextension install osscar@jupyterlab-hide-code
+jupyter labextension install @osscar/jupyterlab-hide-code
+```
+
+## Uninstall
+
+```bash
+jupyter labextension uninstall jupyterlab-hide-code
 ```
 
 ## Contributing
 
-### Install
+### Build
 
 The `jlpm` command is JupyterLab's pinned version of
 [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use
@@ -52,15 +58,9 @@ jlpm watch
 jupyter lab --watch
 ```
 
-### Uninstall
-
-```bash
-jupyter labextension uninstall jupyterlab-hide-code
-```
-
-# Acknowlegements
+## Acknowlegements
 
 We acknowledge support from:
 * EPFL Open Science Fund
 
-<img src='./OSSCAR-logo.png' width='300'>
+<img src='http://www.osscar.org/wp-content/uploads/2019/03/OSSCAR-logo.png' width='240'>

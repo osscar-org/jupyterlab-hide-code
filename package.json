@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-hide-code",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "A JupyterLab extension to run and hide the codecells.",
   "keywords": [
     "jupyter",
@@ -43,14 +43,14 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyterlab/application": "^3.0.4",
-    "@jupyterlab/apputils": "3.0.3",
-    "@jupyterlab/docregistry": "3.0.4",
-    "@jupyterlab/notebook": "3.0.4",
-    "@jupyterlab/services": "6.0.3"
+    "@jupyterlab/application": "^3.0.5",
+    "@jupyterlab/apputils": "3.0.4",
+    "@jupyterlab/docregistry": "3.0.5",
+    "@jupyterlab/notebook": "3.0.5",
+    "@jupyterlab/services": "6.0.4"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "^3.0.2",
+    "@jupyterlab/builder": "^3.0.3",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "eslint": "^7.5.0",

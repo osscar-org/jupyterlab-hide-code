@@ -39,7 +39,7 @@ def update_version(_, version=""):
         )
 
     update_file(
-        TOP_DIR.joinpath("package.json"), (r"version=.*,", f"version='{version}',")
+            TOP_DIR.joinpath("package.json"), (r'"version":.*,', f'"version": "{version}",')
     )
 
     print(f"Bumped version to {version} !")

@@ -1,0 +1,58 @@
+name: Publish on PyPI
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: github.repository == 'materialscloud-org/voila-materialscloud-template' && startsWith(github.ref, 'refs/tags/v')
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -U setuptools
+        pip install -U invoke
+
+    - name: Update version
+      run: invoke update-version --version="${GITHUB_REF#refs/tags/}"
+
+    - name: Create new tag
+      run: |
+        git config --local user.email "dev@materialscloud.org"
+        git config --local user.name "Materials Cloud Team"
+
+        git commit -m "Release ${GITHUB_REF#refs/tags/}" -a
+
+        TAG_MSG=.github/static/release_tag_msg.txt
+        sed -i "s|TAG_NAME|${GITHUB_REF#refs/tags/}|g" "${TAG_MSG}"
+
+        git tag -af -F "${TAG_MSG}" ${GITHUB_REF#refs/tags/}
+
+    - name: Push release commit and new tag
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
+        tags: true
+        branch: develop
+
+    - name: Build source distribution
+      run: python ./setup.py sdist
+
+    - name: Publish package to PyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_PASSWORD }}

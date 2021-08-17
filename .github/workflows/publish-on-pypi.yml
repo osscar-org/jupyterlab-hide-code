@@ -24,6 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -U setuptools
         pip install -U invoke
+        pip install -U jupyter-packaging
 
     - name: Update version
       run: invoke update-version --version="${GITHUB_REF#refs/tags/}"

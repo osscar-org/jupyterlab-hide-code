@@ -1,13 +1,14 @@
 # jupyterlab-hide-code
 
 ![Build](https://github.com/osscar-org/jupyterlab-hide-code/workflows/Build/badge.svg)
-
-![demo](./docs/hide-input.gif)
+[![PyPI version](https://badge.fury.io/py/jupyterlab-hide-code.svg)](https://badge.fury.io/py/jupyterlab-hide-code)
 
 A button in JupyterLab to run the code cells and then to hide the code cells.
 This JupyterLab extension was inspired by the
 [jlab-hide-code](https://github.com/AixViPMaP/jlab-hide-code) JupyterLab
 extension from Aachen (Aix) Virtual Platform for Materials Processing.
+
+![demo](./docs/hide-input.gif)
 
 ## Requirements
 

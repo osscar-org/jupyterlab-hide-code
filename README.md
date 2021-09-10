@@ -1,4 +1,4 @@
-# jupyterlab-hide-code
+# **jupyterlab-hide-code**: A JupyterLab Extension to Run and Hide Source Code
 
 ![Build](https://github.com/osscar-org/jupyterlab-hide-code/workflows/Build/badge.svg)
 [![PyPI version](https://badge.fury.io/py/jupyterlab-hide-code.svg)](https://badge.fury.io/py/jupyterlab-hide-code)

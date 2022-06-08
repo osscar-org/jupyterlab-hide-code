@@ -47,7 +47,7 @@
     "@jupyterlab/apputils": "3.4.2",
     "@jupyterlab/docregistry": "3.4.2",
     "@jupyterlab/notebook": "3.4.2",
-    "@jupyterlab/services": "6.4.2"
+    "@jupyterlab/services": "6.4.3"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^3.4.2",

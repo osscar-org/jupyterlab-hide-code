@@ -43,17 +43,17 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyterlab/application": "^3.4.2",
-    "@jupyterlab/apputils": "3.4.2",
-    "@jupyterlab/docregistry": "3.4.2",
-    "@jupyterlab/notebook": "3.4.2",
-    "@jupyterlab/services": "6.4.2"
+    "@jupyterlab/application": "^3.4.3",
+    "@jupyterlab/apputils": "3.4.3",
+    "@jupyterlab/docregistry": "3.4.3",
+    "@jupyterlab/notebook": "3.4.3",
+    "@jupyterlab/services": "6.4.3"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "^3.4.2",
-    "@typescript-eslint/eslint-plugin": "^5.23.0",
-    "@typescript-eslint/parser": "^5.23.0",
-    "eslint": "^8.15.0",
+    "@jupyterlab/builder": "^3.4.3",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "npm-run-all": "^4.1.5",

@@ -61,7 +61,7 @@ jupyter lab --watch
 
 ## Acknowlegements
 
-We acknowledge support from:
-* EPFL Open Science Fund
+We acknowledge support from the EPFL Open Science Fund via the [OSSCAR](http://www.osscar.org) project.
 
-<img src='http://www.osscar.org/wp-content/uploads/2019/03/OSSCAR-logo.png' width='240'>
+<img src='https://www.osscar.org/_images/logos.png' width='700'>
+

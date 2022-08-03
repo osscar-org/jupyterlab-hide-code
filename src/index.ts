@@ -1,6 +1,6 @@
 import {
   JupyterFrontEnd,
-  JupyterFrontEndPlugin,
+  JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
 import { IDisposable, DisposableDelegate } from '@lumino/disposable';
@@ -14,7 +14,7 @@ import { DocumentRegistry } from '@jupyterlab/docregistry';
 import {
   NotebookActions,
   NotebookPanel,
-  INotebookModel,
+  INotebookModel
 } from '@jupyterlab/notebook';
 
 import '../style/index.css';
@@ -28,7 +28,7 @@ const extension: JupyterFrontEndPlugin<void> = {
   activate: (app: JupyterFrontEnd) => {
     app.docRegistry.addWidgetExtension('Notebook', new ButtonExtension());
     console.log('JupyterLab extension jupyterlab-hide-code is activated!');
-  },
+  }
 };
 
 export class ButtonExtension
@@ -41,7 +41,7 @@ export class ButtonExtension
     const hideInputCode = () => {
       NotebookActions.runAll(panel.content, context.sessionContext);
 
-      panel.content.widgets.forEach((cell) => {
+      panel.content.widgets.forEach(cell => {
         if (cell.model.type === 'code') {
           const layout = cell.layout as PanelLayout;
           layout.widgets[1].hide();
@@ -51,7 +51,7 @@ export class ButtonExtension
       buttonShowInput.show();
     };
     const showInputCode = () => {
-      panel.content.widgets.forEach((cell) => {
+      panel.content.widgets.forEach(cell => {
         if (cell.model.type === 'code') {
           const layout = cell.layout as PanelLayout;
           layout.widgets[1].show();
@@ -66,14 +66,14 @@ export class ButtonExtension
       className: 'myButton',
       iconClass: 'fa fa-sm fa-eye-slash fontawesome-colors',
       onClick: hideInputCode,
-      tooltip: 'Hide Input',
+      tooltip: 'Hide Input'
     });
 
     const buttonShowInput = new ToolbarButton({
       className: 'myButton',
       iconClass: 'fa fa-sm fa-eye fontawesome-colors',
       onClick: showInputCode,
-      tooltip: 'Show Input',
+      tooltip: 'Show Input'
     });
 
     buttonShowInput.hide();

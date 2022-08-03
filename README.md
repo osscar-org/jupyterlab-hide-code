@@ -12,8 +12,7 @@ extension from Aachen (Aix) Virtual Platform for Materials Processing.
 
 ## Requirements
 
-* JupyterLab >= 3.0
-
+- JupyterLab >= 3.0
 
 ## Install
 
@@ -64,4 +63,3 @@ jupyter lab --watch
 We acknowledge support from the EPFL Open Science Fund via the [OSSCAR](http://www.osscar.org) project.
 
 <img src='https://www.osscar.org/_images/logos.png' width='700'>
-

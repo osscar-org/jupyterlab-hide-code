@@ -58,7 +58,7 @@
     "@jupyterlab/apputils": "3.4.5",
     "@jupyterlab/docregistry": "3.4.5",
     "@jupyterlab/notebook": "3.4.5",
-    "@jupyterlab/services": "6.4.5"
+    "@jupyterlab/services": "6.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",

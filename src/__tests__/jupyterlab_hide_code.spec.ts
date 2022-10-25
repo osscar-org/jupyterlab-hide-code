@@ -1,5 +1,5 @@
 /**
- * @jest-environment jsdom
+ * Example of [Jest](https://jestjs.io/docs/getting-started) unit tests
  */
 
 describe('jupyterlab-hide-code', () => {

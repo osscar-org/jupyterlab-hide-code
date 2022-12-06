@@ -56,7 +56,7 @@
   "dependencies": {
     "@jupyterlab/application": "^3.5.0",
     "@jupyterlab/apputils": "3.5.0",
-    "@jupyterlab/docregistry": "3.5.0",
+    "@jupyterlab/docregistry": "3.5.1",
     "@jupyterlab/notebook": "3.5.0",
     "@jupyterlab/services": "6.5.0"
   },

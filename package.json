@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-hide-code",
-  "version": "3.6.1",
+  "version": "3.6.2",
   "description": "A JupyterLab extension to run and hide source code.",
   "keywords": [
     "jupyter",

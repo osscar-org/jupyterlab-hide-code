@@ -63,7 +63,7 @@
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
-    "@jupyterlab/builder": "^3.6.3",
+    "@jupyterlab/builder": "^4.0.0",
     "@jupyterlab/testutils": "^3.6.3",
     "@types/jest": "^29.5.1",
     "@typescript-eslint/eslint-plugin": "^5.59.5",

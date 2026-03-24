@@ -40,6 +40,30 @@ export class ButtonExtension
     panel: NotebookPanel,
     context: DocumentRegistry.IContext<INotebookModel>
   ): IDisposable {
+    let hidden = false;
+
+    // Block keyboard shortcuts that change cell type in command mode
+    const blockCellTypeShortcuts = (event: KeyboardEvent) => {
+      if (!hidden) {
+        return;
+      }
+      // Cell type: m, y, r, 1-6
+      // Add/remove/reorder: a, b, d (dd), x, v, z, Shift+M
+      const blockedKeys = [
+        'm', 'y', 'r', '1', '2', '3', '4', '5', '6',
+        'a', 'b', 'd', 'x', 'v', 'z'
+      ];
+      const isBlocked =
+        (blockedKeys.includes(event.key) &&
+          !event.ctrlKey && !event.altKey && !event.metaKey) ||
+        (event.key === 'M' && event.shiftKey &&
+          !event.ctrlKey && !event.altKey && !event.metaKey);
+      if (isBlocked) {
+        event.stopPropagation();
+        event.preventDefault();
+      }
+    };
+
     const hideInputCode = () => {
       NotebookActions.runAll(panel.content, context.sessionContext);
 
@@ -48,7 +72,14 @@ export class ButtonExtension
           const layout = cell.layout as PanelLayout;
           layout.widgets[1].hide();
         }
+        if (cell.editor) {
+          cell.editor.setOption('readOnly', true);
+        }
       });
+
+      hidden = true;
+      panel.content.node.addEventListener('keydown', blockCellTypeShortcuts, true);
+
       buttonHideInput.hide();
       buttonShowInput.show();
     };
@@ -58,7 +89,13 @@ export class ButtonExtension
           const layout = cell.layout as PanelLayout;
           layout.widgets[1].show();
         }
+        if (cell.editor) {
+          cell.editor.setOption('readOnly', false);
+        }
       });
+
+      hidden = false;
+      panel.content.node.removeEventListener('keydown', blockCellTypeShortcuts, true);
 
       buttonHideInput.show();
       buttonShowInput.hide();

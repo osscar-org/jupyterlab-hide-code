@@ -50,14 +50,32 @@ export class ButtonExtension
       // Cell type: m, y, r, 1-6
       // Add/remove/reorder: a, b, d (dd), x, v, z, Shift+M
       const blockedKeys = [
-        'm', 'y', 'r', '1', '2', '3', '4', '5', '6',
-        'a', 'b', 'd', 'x', 'v', 'z'
+        'm',
+        'y',
+        'r',
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        'a',
+        'b',
+        'd',
+        'x',
+        'v',
+        'z'
       ];
       const isBlocked =
         (blockedKeys.includes(event.key) &&
-          !event.ctrlKey && !event.altKey && !event.metaKey) ||
-        (event.key === 'M' && event.shiftKey &&
-          !event.ctrlKey && !event.altKey && !event.metaKey);
+          !event.ctrlKey &&
+          !event.altKey &&
+          !event.metaKey) ||
+        (event.key === 'M' &&
+          event.shiftKey &&
+          !event.ctrlKey &&
+          !event.altKey &&
+          !event.metaKey);
       if (isBlocked) {
         event.stopPropagation();
         event.preventDefault();
@@ -78,7 +96,11 @@ export class ButtonExtension
       });
 
       hidden = true;
-      panel.content.node.addEventListener('keydown', blockCellTypeShortcuts, true);
+      panel.content.node.addEventListener(
+        'keydown',
+        blockCellTypeShortcuts,
+        true
+      );
 
       buttonHideInput.hide();
       buttonShowInput.show();
@@ -95,7 +117,11 @@ export class ButtonExtension
       });
 
       hidden = false;
-      panel.content.node.removeEventListener('keydown', blockCellTypeShortcuts, true);
+      panel.content.node.removeEventListener(
+        'keydown',
+        blockCellTypeShortcuts,
+        true
+      );
 
       buttonHideInput.show();
       buttonShowInput.hide();

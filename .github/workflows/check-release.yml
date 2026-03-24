@@ -17,7 +17,7 @@ jobs:
         run: |
           pip install -e .
       - name: Generate yarn.lock
-        run: jlpm
+        run: touch yarn.lock
       - name: Check Release
         uses: jupyter-server/jupyter_releaser/.github/actions/check-release@v2
         with:

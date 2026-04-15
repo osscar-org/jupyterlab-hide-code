@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab_hide_code",
-  "version": "4.0.0",
+  "version": "4.1.1",
   "description": "A button in JupyterLab to run the code cells and then to hide the code cells.",
   "keywords": [
     "jupyter",

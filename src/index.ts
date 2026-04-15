@@ -47,6 +47,13 @@ export class ButtonExtension
       if (!hidden) {
         return;
       }
+      // Let keys through when the event originates inside a cell's output
+      // area — ipywidgets and similar interactive outputs live there and
+      // may need keys for their own handlers.
+      const target = event.target as HTMLElement | null;
+      if (target && target.closest('.jp-OutputArea')) {
+        return;
+      }
       // Cell type: m, y, r, 1-6
       // Add/remove/reorder: a, b, d (dd), x, v, z, Shift+M
       const blockedKeys = [

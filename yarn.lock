@@ -7347,8 +7347,8 @@ __metadata:
   linkType: hard
 
 "handlebars@npm:^4.7.8":
-  version: 4.7.8
-  resolution: "handlebars@npm:4.7.8"
+  version: 4.7.9
+  resolution: "handlebars@npm:4.7.9"
   dependencies:
     minimist: ^1.2.5
     neo-async: ^2.6.2
@@ -7360,7 +7360,7 @@ __metadata:
       optional: true
   bin:
     handlebars: bin/handlebars
-  checksum: 00e68bb5c183fd7b8b63322e6234b5ac8fbb960d712cb3f25587d559c2951d9642df83c04a1172c918c41bcfc81bfbd7a7718bbce93b893e0135fc99edea93ff
+  checksum: ac39070fc1c3c76a654e4b526383eaf1601976eaa474547b263915b4806977f083600e586ca923709baeed7c82a42640bcc9cc04c37a7efd3fb444f49b8347d6
   languageName: node
   linkType: hard
 
@@ -11811,11 +11811,11 @@ __metadata:
 
 "typescript@patch:typescript@~5.0.2#~builtin<compat/typescript>":
   version: 5.0.4
-  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"
+  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: bb309d320c59a26565fb3793dba550576ab861018ff3fd1b7fccabbe46ae4a35546bc45f342c0a0b6f265c801ccdf64ffd68f548f117ceb7f0eac4b805cd52a9
+  checksum: d26b6ba97b6d163c55dbdffd9bbb4c211667ebebc743accfeb2c8c0154aace7afd097b51165a72a5bad2cf65a4612259344ff60f8e642362aa1695c760d303ac
   languageName: node
   linkType: hard
 

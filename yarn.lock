@@ -856,8 +856,8 @@ __metadata:
   linkType: hard
 
 "@babel/plugin-transform-modules-systemjs@npm:^7.29.0":
-  version: 7.29.0
-  resolution: "@babel/plugin-transform-modules-systemjs@npm:7.29.0"
+  version: 7.29.4
+  resolution: "@babel/plugin-transform-modules-systemjs@npm:7.29.4"
   dependencies:
     "@babel/helper-module-transforms": ^7.28.6
     "@babel/helper-plugin-utils": ^7.28.6
@@ -865,7 +865,7 @@ __metadata:
     "@babel/traverse": ^7.29.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 36fd7bcd694549effdbdf733c32f0c9dbadea052316ff5e0830b07482a60c8ff1ee79850efff05e8046c4b99c241832f2c5267e0ae7c721c531c8ef12930c4b9
+  checksum: d9cbb30669077756048af990a08ad1ba149785c336024affa49848dc4ffc5948bfaaf52d90bbec711a1f320e19e2c60182dbeff40d81cc5b9a09a87919abe07d
   languageName: node
   linkType: hard
 
@@ -11811,11 +11811,11 @@ __metadata:
 
 "typescript@patch:typescript@~5.0.2#~builtin<compat/typescript>":
   version: 5.0.4
-  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"
+  resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=b5f058"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: bb309d320c59a26565fb3793dba550576ab861018ff3fd1b7fccabbe46ae4a35546bc45f342c0a0b6f265c801ccdf64ffd68f548f117ceb7f0eac4b805cd52a9
+  checksum: d26b6ba97b6d163c55dbdffd9bbb4c211667ebebc743accfeb2c8c0154aace7afd097b51165a72a5bad2cf65a4612259344ff60f8e642362aa1695c760d303ac
   languageName: node
   linkType: hard
 

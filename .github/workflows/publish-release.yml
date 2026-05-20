@@ -15,6 +15,9 @@ on:
 jobs:
   publish_release:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write          # required for PyPI OIDC
+      contents: write          # so Releaser can create the tag/release
     steps:
       - uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
 
@@ -34,12 +37,13 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
           PYPI_TOKEN_MAP: ${{ secrets.PYPI_TOKEN_MAP }}
           TWINE_USERNAME: __token__
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          #NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         uses: jupyter-server/jupyter-releaser/.github/actions/finalize-release@v2
         with:
           token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
           target: ${{ github.event.inputs.target }}
           release_url: ${{ steps.populate-release.outputs.release_url }}
+          npm_cmd: "true"  # skip npm release  
 
       - name: "** Next Step **"
         if: ${{ success() }}
